@@ -1,0 +1,23 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+    <h1>Love story</h1>
+
+
+    {% for project in projects %}
+
+
+    <br>
+
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.discription }}</p>
+    <img src="{{ project.image.url }}" height=600 width=400>
+    {% if project.url %}
+    <br><a href="{{ project.url }}">Link</a>
+
+    {% endif %}
+    <br>
+    {% endfor %}
+
+{% endblock %}
